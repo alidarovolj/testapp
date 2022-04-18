@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <navbar />
     <div class="search">
       <div class="flex items-center mx-auto w-1/2 py-20 relative">
         <input v-model="query" @keyup="filterPhotos()" class="w-full p-3" type="text" placeholder="Поиск" />
@@ -20,12 +19,8 @@
 <script>
 import axios from "axios";
 
-import navbar from "../components/NavbarComp.vue";
 export default {
   name: "HomeView",
-  components: {
-    navbar,
-  },
   data() {
     return {
       url: "https://api.unsplash.com/search/photos/",
